@@ -5,30 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2020HBD</title>
     <style>
-        .body{
+        body{
             margin: 0;
             padding: 0;
         }
         .container{
+            position: relative;
+            
+
+        }
+        .down{
             display: flex;
             margin: 0;
             padding: 0;
+
         }
         .background{
             margin: 0 ;
             width: 100vw;
             position: fixed;
             bottom: 0vh;
+            z-index: 1;
         }
+        .word{
+            margin: 50% auto;
+            width: 20vw;
+        }
+
+        .up{
+            position: absolute;
+
+            top: 100vh;
+            margin: 0;
+            padding: 0;
+
+        }
+        .voice{
+            width: 0px;
+        }
+
+
+        .say{
+            color:#8a8b60;
+            z-index: 0;
+            padding: 10%;
+            font-family: 微軟正黑體,Arial, Helvetica, sans-serif;
+        }
+
+        .small{
+            font-size: 12px;
+            line-height: 20px;
+        }
+    
+
+
+
     </style>
 
 </head>
 <body>
+
+
+
+    
     
     <div class="container">
-        <img src="./nina3.png" alt="" class="background"  >
+        <div class="down">
+            <img src="./hbd_hand.jpg" id="btplay" class="word"  >
+            <audio controls class="voice" id="mymp3">
+                <source src="./hbd_voice.mp3" type="audio/mpeg">
+            </audio>
+            <img src="./nina4.png" alt="" class="background"  >
+        </div>
+        <div class="up" >
+
+            <div class="say">
+
+            
+            <p> 22歲的羅子寧，生日快樂。 </p>
+            <p class="small"> 
+            我是22歲的劉心鈺，你認識10年的朋友。
+            <br>
+            22歲的我開始對一些記憶感到陌生，像是你為什麼寫這封信給我，像是原來你曾經做了這個小瓶子給我。 
+            這些被帶走的記憶是太瑣碎，還是不夠刻骨銘心? 但可笑的是，現在的我卻還記得，在佛祖的注視下，硬生生地吞下討厭的茄子。
+            <br><br>
+            突然覺得，22歲的我，真是太對不起十年前努力活在當下的自己。
+            <br><br>
+            於是乎你收到了那個Beacon，我寫起了這個網頁。希望可以記錄每一年的我們，那些害怕的人事物，是不是不再害怕了?那個有憧憬的自己，是不是開始學會享受平靜的日子?
+            於是乎慢慢變老的我，在這裡寫著對你的獨白。或許我們無法在一起跨夜慶祝，但當時間到了，連起這個網頁，仍舊可以看到我對你的祝福。<br>
+            <br>
+            必須比十年前的我更加努力留住每個值得的回憶，才能不讓十年後的自己失望。
+            <br><br>
+            22歲的我，希望我們都能更勇敢、更無所畏懼的面對社會以及未來。(白話: 拜託讓我無痛讀完研究所，讓我們都找到喜歡的工作。)
+            <br>
+            還有，希望明年的你會記得怎麼用Beacon，以及明年的我還記得怎麼寫網頁XD
+            <br>
+            <br>
+            <br>
+            <br>
+            
+            <br>
+            </p>
+
+            </div>
+        </div>
+
     </div>
 
     
+    
+    
 </body>
 </html>
+
+<script>
+    var ebtplay = document.querySelector("#btplay");
+    var emymp3 = document.querySelector("#mymp3");
+    ebtplay.onclick = function(){
+        emymp3.play();
+    }
+</script>
+
+
